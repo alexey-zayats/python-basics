@@ -9,6 +9,8 @@ number = input("Введите целое положительное число:
 biggest = int(number[0])
 i = 1
 while i < len(number):
+    if biggest == 9:
+        break
     if biggest < int(number[i]):
         biggest = int(number[i])
     i = i + 1
