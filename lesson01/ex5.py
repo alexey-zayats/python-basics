@@ -11,12 +11,11 @@ lose = int(input("Введите значение издержек: "))
 if profit > lose:
     effi = (profit - lose) / profit
     print(f"Фирма работает в прибыль с рентабельностью {effi * 100:.2f}%")
+
+    employees = int(input("Введите численность сотрудников: "))
+    print(f"Прибыль фирмы в расчете на одного сотрудника: {((profit - lose) / employees):.2f}")
+
 elif profit == lose:
     print("Фирма работает в 'ноль'")
 else:
     print("Фирма работает в убыток")
-
-employees = int(input("Введите численность сотрудников: "))
-
-profitPerEmployee = (profit - lose) / employees
-print(f"Прибыль фирмы в расчете на одного сотрудника: {profitPerEmployee:.2f}")
