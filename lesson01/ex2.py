@@ -1,8 +1,16 @@
-import time
+"""
+Пользователь вводит время в секундах.
+Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс.
+Используйте форматирование строк.
 
-timeSec = int(input("Введите время в секундах: "))
+3600 + 60 + 30
+1800 + 30 + 15
 
-# (tm_year,tm_mon,tm_mday,tm_hour,tm_min, tm_sec,tm_wday,tm_yday,tm_isdst)
-t = time.localtime(timeSec)
+"""
+t = int(input("Введите время в секундах: "))
 
-print(f"{t.tm_hour:02d}:{t.tm_min:02d}:{t.tm_sec:02d}")
+hour = int(t / 3600)
+min = int(t % 3600 / 60)
+sec = int(t % 3600 % 60)
+
+print(f"{hour:02d}:{min:02d}:{sec:02d}")
