@@ -6,8 +6,8 @@
 """
 
 line = input("Введите строку из нескольких слов, разделённых пробелами: ")
-text = line.split(" ")
-i = 1
-for line in text:
+text = line.strip().split(" ")
+for i, line in enumerate(text):
+    if len(line) > 10:
+        line = line[:10]
     print(f"#{i}: {line}")
-    i += 1
